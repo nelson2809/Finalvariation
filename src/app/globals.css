@@ -1,0 +1,349 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Agonis Partners — Design System
+   Premium • Navy + Champagne Gold • International B2B
+   8px spacing grid, F-pattern friendly, WCAG AA contrast
+   ============================================================ */
+
+@theme {
+  /* ---- Brand palette: deep navy + champagne gold + steel ---- */
+  --color-ink: #0b1a30; /* deep navy — primary headings */
+  --color-navy: #102a4c; /* primary brand */
+  --color-navy-600: #0e2342;
+  --color-navy-800: #0a1a33;
+  --color-navy-900: #07111f; /* dark sections / footer */
+
+  --color-steel: #3f5e80; /* steel blue accent */
+  --color-steel-200: #c8d6e5;
+
+  --color-gold: #c7a45a; /* champagne gold */
+  --color-gold-600: #b18d41;
+  --color-gold-300: #e0cd9c;
+  --color-gold-100: #f1e7ce;
+
+  --color-sand: #faf7f1; /* soft beige background */
+  --color-sand-100: #f4eee3; /* beige section background */
+  --color-cloud: #f5f7fa; /* cool section background */
+
+  --color-line: #e7e1d5; /* warm hairline border */
+  --color-line-cool: #e2e8f0;
+
+  --color-body: #475569; /* body text */
+  --color-muted: #64748b;
+
+  --color-success: #0f9d6e;
+  --color-warning: #e0922f;
+
+  /* ---- Typography ---- */
+  --font-heading: var(--font-poppins), "Poppins", system-ui, sans-serif;
+  --font-body: var(--font-lora), "Lora", Georgia, serif;
+  --font-sans: var(--font-poppins), "Poppins", system-ui, sans-serif;
+
+  /* ---- Radii (16px default per brief) ---- */
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 28px;
+
+  /* ---- Shadows: soft, premium ---- */
+  --shadow-soft: 0 1px 2px rgba(11, 26, 48, 0.04), 0 8px 24px rgba(11, 26, 48, 0.06);
+  --shadow-lift: 0 18px 48px -12px rgba(11, 26, 48, 0.18);
+  --shadow-gold: 0 14px 34px -10px rgba(199, 164, 90, 0.45);
+
+  /* ---- Animations ---- */
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-float-slow: floatSlow 14s ease-in-out infinite;
+  --animate-float-slower: floatSlow 22s ease-in-out infinite;
+  --animate-kenburns: kenBurns 24s ease-in-out infinite alternate;
+  --animate-scroll-cue: scrollCue 2.2s ease-in-out infinite;
+}
+
+@keyframes kenBurns {
+  from {
+    transform: scale(1) translateY(0);
+  }
+  to {
+    transform: scale(1.08) translateY(-1.5%);
+  }
+}
+
+@keyframes progressGrow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes scrollCue {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 0.4;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(0, -26px) scale(1.05);
+  }
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+@layer base {
+  :root {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 96px; /* offset for sticky header on anchor jumps */
+  }
+
+  body {
+    background-color: #ffffff;
+    color: var(--color-body);
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Editorial: headlines set in the serif (Lora) for a magazine feel */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+
+  /* Accessible focus ring for keyboard users */
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* ============================================================
+   Reusable component utilities
+   ============================================================ */
+@layer components {
+  .container-px {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 80rem; /* 1280px */
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 1024px) {
+    .container-px {
+      padding-inline: 2rem;
+    }
+  }
+
+  .eyebrow {
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-gold-600);
+  }
+
+  .gold-rule {
+    width: 56px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--color-gold), var(--color-gold-300));
+  }
+
+  /* Subtle dotted/grid backdrop for hero & dark blocks */
+  .bg-grid {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+  }
+  .bg-grid-ink {
+    background-image: radial-gradient(
+      rgba(16, 42, 76, 0.05) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+  }
+
+  .card-hover {
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.35s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lift);
+  }
+
+  /* ---------- Editorial luxe utilities ---------- */
+
+  /* Oversized serif display for the hero masthead */
+  .display-edit {
+    font-family: var(--font-body);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.04;
+    font-size: clamp(2.9rem, 6.2vw, 5rem);
+    text-wrap: balance;
+  }
+
+  /* Tiny letterspaced sans kicker */
+  .kicker-edit {
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-gold-600);
+  }
+
+  /* Thin editorial hairline */
+  .hairline {
+    height: 1px;
+    background: var(--color-line);
+  }
+
+  /* ---------- Premium interaction utilities ---------- */
+
+  /* Light sweep across buttons on hover */
+  .btn-shine {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .btn-shine::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      105deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.45) 50%,
+      transparent 60%
+    );
+    transform: translateX(-120%);
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+  .btn-shine:hover::after {
+    transform: translateX(120%);
+  }
+
+  /* Animated underline that grows from the left */
+  .underline-grow {
+    position: relative;
+  }
+  .underline-grow::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    width: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--color-gold), var(--color-gold-300));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .underline-grow:hover::after,
+  .group:hover .underline-grow::after {
+    transform: scaleX(1);
+  }
+
+  /* Card with gold gradient border reveal on hover */
+  .card-luxe {
+    position: relative;
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .card-luxe::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      var(--color-gold),
+      var(--color-gold-300) 40%,
+      transparent 70%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+  .card-luxe:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lift);
+  }
+  .card-luxe:hover::before {
+    opacity: 1;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
