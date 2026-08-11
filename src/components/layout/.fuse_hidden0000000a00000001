@@ -55,7 +55,7 @@ export function Header() {
       onMouseLeave={handleLeave}
     >
       <div className="container-px flex h-20 items-center justify-between">
-        <Logo priority />
+        <Logo />
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-0.5 xl:flex" aria-label="Primary">

@@ -443,8 +443,8 @@ export const contact = {
   phoneHref: "tel:+905059095007",
   email: "info@agonispartners.com",
   emailHref: "mailto:info@agonispartners.com",
-  whatsapp: "+90 (5xx) 000 00 00",
-  whatsappHref: "https://wa.me/905000000000",
+  whatsapp: "+90 505 9095007",
+  whatsappHref: "https://wa.me/+905059095007",
   hours: "Mon – Fri · 09:00 – 18:00 (GMT+3)",
   mapEmbed:
     "https://www.google.com/maps?q=Ikar%20Is%20Merkezi%20Tepeg%C3%B6z%20Sk.%20G%C3%B6ztepe%20Kad%C4%B1k%C3%B6y%20Istanbul&output=embed",

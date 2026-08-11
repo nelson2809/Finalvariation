@@ -1,62 +1,71 @@
+import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-/** Agonis Partners wordmark + monogram. `light` for use on dark backgrounds. */
+/* Intrinsic pixel size of the source artwork — lets Next.js reserve the
+   correct space so the header doesn't shift while the image loads. */
+const LOGO_W = 682;
+const LOGO_H = 227;
+
+/**
+ * Agonis Partners logo lockup.
+ *
+ * `light` swaps to the reversed artwork (navy → white, gold retained) for use
+ * on dark backgrounds such as the footer.
+ */
 export function Logo({
   light = false,
   className,
+  priority = false,
 }: {
   light?: boolean;
   className?: string;
+  priority?: boolean;
 }) {
   return (
     <Link
       href="/"
       aria-label="Agonis Partners — home"
-      className={cn("group inline-flex items-center gap-3", className)}
+      className={cn(
+        "inline-flex shrink-0 items-center rounded-md transition-opacity duration-300 hover:opacity-85",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2",
+        light ? "focus-visible:ring-offset-navy-900" : "focus-visible:ring-offset-white",
+        className,
+      )}
     >
-      <span className="relative inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy shadow-soft ring-1 ring-white/10">
-        <svg
-          viewBox="0 0 24 24"
-          className="h-6 w-6"
-          fill="none"
-          aria-hidden="true"
-        >
-          {/* Stylised "A" formed by two ascending strokes — import/growth motif */}
-          <path
-            d="M6 19L12 5l6 14"
-            stroke="#ffffff"
-            strokeWidth="1.9"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M8.6 13.4h6.8"
-            stroke="#c7a45a"
-            strokeWidth="1.9"
-            strokeLinecap="round"
-          />
-        </svg>
-        <span className="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full bg-gold ring-2 ring-white" />
-      </span>
-      <span className="flex flex-col leading-none">
-        <span
-          className={cn(
-            "font-heading text-[1.15rem] font-semibold tracking-tight",
-            light ? "text-white" : "text-ink",
-          )}
-        >
-          Agonis Partners
-        </span>
-        <span
-          className={cn(
-            "mt-1 font-heading text-[0.62rem] font-medium uppercase tracking-[0.22em]",
-            light ? "text-gold-300" : "text-gold-600",
-          )}
-        >
-          Import &amp; Distribution
-        </span>
-      </span>
+      <Image
+        src={light ? "/agonis-logo-light.png" : "/agonis-logo.png"}
+        alt="Agonis Partners — Import &amp; Distribution"
+        width={LOGO_W}
+        height={LOGO_H}
+        priority={priority}
+        sizes="200px"
+        className="h-10 w-auto sm:h-12 lg:h-[3.35rem]"
+      />
     </Link>
+  );
+}
+
+/**
+ * The "A" monogram on its own — for tight spaces where the full wordmark
+ * would be unreadable.
+ */
+export function LogoMark({
+  className,
+  size = 40,
+}: {
+  className?: string;
+  size?: number;
+}) {
+  return (
+    <Image
+      src="/agonis-mark.png"
+      alt=""
+      aria-hidden="true"
+      width={512}
+      height={512}
+      style={{ width: size, height: size }}
+      className={cn("object-contain", className)}
+    />
   );
 }
