@@ -1,6 +1,8 @@
+"use client";
+
 import { Section } from "@/components/ui/Section";
 import { Reveal, RevealStagger, RevealItem } from "@/components/ui/Reveal";
-import { CountUp } from "@/components/ui/CountUp";
+import CountUp from "@/components/ui/CountUp";
 import { whyTurkiye } from "@/lib/data";
 
 export function WhyTurkiye() {

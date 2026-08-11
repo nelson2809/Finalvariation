@@ -53,6 +53,8 @@ export type Service = {
   title: string;
   short: string;
   points: string[];
+  /** Optional override shown on the What We Do detail page. */
+  detailPoints?: string[];
 };
 
 export const services: Service[] = [
@@ -63,8 +65,14 @@ export const services: Service[] = [
       "We partner with selected international consumer brands that have strong product potential and a clear fit for the Turkish market.",
     points: [
       "Category, pricing & differentiation review",
-      "Customer-review and ratings analysis",
       "Market-potential & demand assessment",
+      "Go-to-market planning",
+      "Long-term growth opportunity evaluation",
+    ],
+    detailPoints: [
+      "Market-potential & demand assessment",
+      "Category, pricing & differentiation review",
+      "Initial meetings and opportunity assessment",
       "Long-term growth opportunity evaluation",
     ],
   },
@@ -100,7 +108,7 @@ export const services: Service[] = [
     points: [
       "Pricing & product positioning",
       "Campaign planning & marketplace visibility",
-      "Customer-feedback management",
+      "Customer feedback & support management",
       "Reorder planning & range expansion",
     ],
   },
@@ -311,9 +319,9 @@ export const whyTurkiye: { value: string; label: string; sub: string }[] = [
     sub: "A large, young and digitally active population.",
   },
   {
-    value: "Top-tier",
+    value: "1st in Europe",
     label: "E-commerce growth",
-    sub: "One of the fastest-growing online retail markets in the region.",
+    sub: "4th in the World",
   },
   {
     value: "4+",
@@ -429,16 +437,17 @@ export const faqs: { q: string; a: string }[] = [
 export const contact = {
   company: "Agonis Partners",
   tagline: "Import & Distribution",
-  address: "Levent, Büyükdere Cd., 34394 Şişli / Istanbul, Türkiye",
-  phone: "+90 (212) 000 00 00",
-  phoneHref: "tel:+902120000000",
-  email: "partners@agonispartners.com",
-  emailHref: "mailto:partners@agonispartners.com",
+  address:
+    "GÖZTEPE MAH. TEPEGÖZ SK. IKAR IS MERKEZI NO: 1 IÇ KAPI NO: 8 KADIKÖY/ ISTANBUL",
+  phone: "+90 505 9095007",
+  phoneHref: "tel:+905059095007",
+  email: "info@agonispartners.com",
+  emailHref: "mailto:info@agonispartners.com",
   whatsapp: "+90 (5xx) 000 00 00",
   whatsappHref: "https://wa.me/905000000000",
   hours: "Mon – Fri · 09:00 – 18:00 (GMT+3)",
   mapEmbed:
-    "https://www.google.com/maps?q=Levent%20Istanbul%20Turkey&output=embed",
+    "https://www.google.com/maps?q=Ikar%20Is%20Merkezi%20Tepeg%C3%B6z%20Sk.%20G%C3%B6ztepe%20Kad%C4%B1k%C3%B6y%20Istanbul&output=embed",
 };
 
 export const productCategoryOptions = [

@@ -12,7 +12,7 @@ import {
  * Animated stat counter. Accepts values like "85M+", "4+", "8", "100%".
  * Non-numeric values (e.g. "Bridge", "Top-tier") render unchanged.
  */
-export function CountUp({
+export default function CountUp({
   value,
   className,
 }: {
@@ -54,3 +54,5 @@ export function CountUp({
     </span>
   );
 }
+
+export { CountUp };

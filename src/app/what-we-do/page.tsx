@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Check } from "lucide-react";
 import { Section } from "@/components/ui/Section";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { Channels } from "@/components/sections/Channels";
@@ -14,7 +13,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "What We Do — Import, Distribution & Marketplace Growth",
   description:
-    "From brand partnership to local sales execution: Agonis Partners handles brand partnerships, import & distribution, marketplace e-commerce sales and long-term brand growth in Türkiye.",
+    "From brand representation to local sales execution: Agonis Partners handles brand partnerships, import & distribution, marketplace e-commerce sales and long-term brand growth in Türkiye.",
 };
 
 const serviceImages = [
@@ -31,7 +30,7 @@ export default function WhatWeDoPage() {
         image={pageHeroImages.whatWeDo}
         imageAlt="Modern fulfilment operations in Türkiye"
         eyebrow="What We Do"
-        title="From brand partnership to local sales execution"
+        title="From brand representation to local sales execution"
         description="Our business covers the full journey of bringing an international consumer brand into Türkiye and growing it through local e-commerce and sales channels."
         breadcrumb={[{ label: "Home", href: "/" }, { label: "What We Do" }]}
       />
@@ -73,7 +72,7 @@ export default function WhatWeDoPage() {
                     {s.short}
                   </p>
                   <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                    {s.points.map((p) => (
+                    {(s.detailPoints ?? s.points).map((p) => (
                       <li
                         key={p}
                         className="flex items-start gap-2.5 rounded-xl border border-line bg-sand px-4 py-3 text-sm text-ink"

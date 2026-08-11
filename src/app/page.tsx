@@ -19,7 +19,7 @@ export default function HomePage() {
     <>
       <Hero />
       {/* <PartnersMarquee /> — hidden until partner references are ready */}
-    
+      <WhatWeDo />
       <MarketShowcase />
       <WhyTurkiye />
       <FocusCategories />
@@ -27,7 +27,7 @@ export default function HomePage() {
       <WhyAgonis />
       <PartnershipModel />
       <Channels />
-      {/* <Compliance /> */}
+      <Compliance />
       <Testimonials />
       <FAQ />
       <ContactCTA />

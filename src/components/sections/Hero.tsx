@@ -49,7 +49,7 @@ export function Hero() {
           >
             <span aria-hidden className="hidden h-px w-16 bg-white/30 sm:block" />
             <p className="font-heading text-xs font-semibold uppercase tracking-[0.28em] text-gold-300">
-              Import &amp; Distribution · Istanbul
+              Import &amp; Distribution · Türkiye
             </p>
             <span aria-hidden className="hidden h-px w-16 bg-white/30 sm:block" />
           </motion.div>

@@ -84,7 +84,7 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
                   id="brand-modal-title"
                   className="mt-3 text-2xl text-ink sm:text-3xl"
                 >
-                  Submit your brand for Türkiye distribution
+                  Submit your brand for Turkish market fit assessment
                 </h2>
                 <p className="mt-2 text-body">
                   Share a few details and we&apos;ll review the fit for the

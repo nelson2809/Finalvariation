@@ -46,7 +46,7 @@ export function MarketShowcase() {
           <em className="italic text-gold-600">Turkish</em> customer
         </h2>
         <p className="mt-6 text-lg leading-relaxed text-body">
-          You supply the products. We handle rest of everything.
+          As your distribution partner in Türkiye, we connect your brand with the right customers.
         </p>
       </Reveal>
 

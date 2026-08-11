@@ -1,6 +1,8 @@
+"use client";
+
 import { ParallaxImage } from "@/components/ui/ParallaxImage";
 import { Reveal, RevealStagger, RevealItem } from "@/components/ui/Reveal";
-import { CountUp } from "@/components/ui/CountUp";
+import CountUp from "@/components/ui/CountUp";
 import { bannerImage, bannerStats } from "@/lib/data";
 
 export function ParallaxBanner() {
