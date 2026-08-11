@@ -6,6 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { BrandForm } from "@/components/brand/BrandForm";
 import { contact, pageHeroImages } from "@/lib/data";
 
+
 export const metadata: Metadata = {
   title: "Contact — Submit Your Brand for Türkiye Distribution",
   description:
