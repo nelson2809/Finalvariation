@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins, Lora } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -12,6 +13,8 @@ import {
   ServiceJsonLd,
   WebSiteJsonLd,
 } from "@/components/seo/JsonLd";
+
+const GA_MEASUREMENT_ID = "G-M5PTSGSML3";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -73,6 +76,9 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
+  verification: {
+    google: "ODcPf4wiwoSacvu1kZsmv9TScxm9mxNE8i7irz3D6Y0",
+  },
 };
 
 export const viewport: Viewport = {
@@ -87,6 +93,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${lora.variable}`}>
       <body>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         <OrganizationJsonLd />
         <WebSiteJsonLd />
         <ServiceJsonLd />
