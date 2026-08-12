@@ -8,9 +8,28 @@ import { contact, pageHeroImages } from "@/lib/data";
 
 
 export const metadata: Metadata = {
-  title: "Contact — Submit Your Brand for Türkiye Distribution",
+  title: "Submit Your Brand for Turkey Distribution",
   description:
-    "Get in touch with Agonis Partners in Istanbul. Submit your brand for Türkiye distribution, or reach us by email, phone or WhatsApp.",
+    "Submit your brand for Turkey distribution and request a brand evaluation. Contact your Türkiye distribution partner in Istanbul by email, phone or WhatsApp to start a distribution partnership application.",
+  keywords: [
+    "submit your brand for Turkey distribution",
+    "contact Türkiye distribution partner",
+    "become a partner brand Turkey",
+    "apply for Turkish market entry",
+    "request brand evaluation",
+    "import inquiry Türkiye",
+    "distribution partnership application",
+    "WhatsApp business inquiry Turkey",
+    "get started import Turkey",
+  ],
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    type: "website",
+    url: "/contact",
+    title: "Submit Your Brand for Turkey Distribution | Agonis Partners",
+    description:
+      "Apply for Turkish market entry. Send us your brand and we'll come back to you with a distribution assessment.",
+  },
 };
 
 const details = [
@@ -64,7 +83,7 @@ export default function ContactPage() {
                     {d.href ? (
                       <a
                         href={d.href}
-                        className="mt-0.5 block text-body transition-colors hover:text-gold-600"
+                        className="mt-0.5 block break-words text-body transition-colors hover:text-gold-600"
                       >
                         {d.value}
                       </a>

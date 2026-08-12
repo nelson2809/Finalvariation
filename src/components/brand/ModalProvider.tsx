@@ -60,7 +60,7 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
             aria-labelledby="brand-modal-title"
           >
             <div
-              className="absolute inset-0 bg-navy-900/70 backdrop-blur-sm"
+              className="fixed inset-0 bg-navy-900/70 backdrop-blur-sm"
               onClick={close}
               aria-hidden="true"
             />
@@ -74,11 +74,11 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
               <button
                 onClick={close}
                 aria-label="Close dialog"
-                className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full text-muted transition-colors hover:bg-sand-100 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                className="absolute right-3 top-3 flex h-11 w-11 items-center justify-center rounded-full text-muted transition-colors hover:bg-sand-100 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
               >
                 <X className="h-5 w-5" />
               </button>
-              <div className="mb-6 max-w-md">
+              <div className="mb-6 max-w-md pr-12">
                 <span className="eyebrow">Become a Partner Brand</span>
                 <h2
                   id="brand-modal-title"

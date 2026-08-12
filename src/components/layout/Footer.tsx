@@ -49,7 +49,7 @@ export function Footer() {
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent"
       />
-      <div className="container-px py-16 lg:py-20">
+      <div className="container-px pb-28 pt-16 sm:pb-16 lg:pb-20 lg:pt-20">
         <div className="grid gap-12 lg:grid-cols-12">
           {/* Brand */}
           <div className="lg:col-span-4">
@@ -142,7 +142,7 @@ export function Footer() {
           <p className="text-xs text-white/45">
             © {year} Agonis Partners. All rights reserved.
           </p>
-          <div className="flex items-center gap-5 text-xs text-white/45">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-white/45">
             {legalLinks.map((l) => (
               <Link key={l.label} href={l.href} className="hover:text-white">
                 {l.label}
@@ -155,7 +155,7 @@ export function Footer() {
                 key={label}
                 href={href}
                 aria-label={label}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/60 transition-all hover:-translate-y-0.5 hover:border-gold hover:text-gold"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white/60 transition-all hover:-translate-y-0.5 hover:border-gold hover:text-gold"
               >
                 <Icon className="h-4 w-4" />
               </a>

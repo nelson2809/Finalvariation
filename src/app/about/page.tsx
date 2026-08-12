@@ -18,9 +18,28 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 import { pageHeroImages } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "About Us — Istanbul-Based Import & Distribution",
+  title: "Istanbul-Based Import & Distribution Company",
   description:
-    "Agonis Partners is an Istanbul-based import and distribution company focused on bringing high-potential international consumer brands to Türkiye and growing them through local e-commerce and sales channels.",
+    "Who is Agonis Partners? An Istanbul-based import and distribution company and reliable local partner in Türkiye for international consumer brands — global mindset, local execution, across the Europe–Asia trade bridge.",
+  keywords: [
+    "Istanbul-based import and distribution company",
+    "who is Agonis Partners",
+    "reliable local partner Türkiye",
+    "international consumer brand partner Istanbul",
+    "Turkey market entry expertise",
+    "long-term brand partnership",
+    "Europe-Asia trade bridge",
+    "commercial focus and transparency",
+    "mission and vision distribution company",
+  ],
+  alternates: { canonical: "/about" },
+  openGraph: {
+    type: "website",
+    url: "/about",
+    title: "Istanbul-Based Import & Distribution Company | Agonis Partners",
+    description:
+      "An Istanbul-based import and distribution company and long-term local partner for international consumer brands entering Turkey.",
+  },
 };
 
 const values = [

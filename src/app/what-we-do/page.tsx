@@ -11,9 +11,31 @@ import { services, pageHeroImages } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "What We Do — Import, Distribution & Marketplace Growth",
+  title: "Import, Distribution & Marketplace Growth Services",
   description:
-    "From brand representation to local sales execution: Agonis Partners handles brand partnerships, import & distribution, marketplace e-commerce sales and long-term brand growth in Türkiye.",
+    "Import, distribution and marketplace growth services in Türkiye: brand partnership services, customs and import coordination in Turkey, product listing localization, and Amazon, Trendyol, Hepsiburada and N11 sales.",
+  keywords: [
+    "import distribution and marketplace growth services Türkiye",
+    "brand partnership services",
+    "customs and import coordination Turkey",
+    "marketplace e-commerce sales Türkiye",
+    "local brand growth services",
+    "product listing localization",
+    "Amazon Trendyol Hepsiburada N11 sales",
+    "customs compliance Turkey",
+    "stock monitoring",
+    "campaign management marketplace",
+    "distribution process end to end",
+    "authorized distributor Türkiye",
+  ],
+  alternates: { canonical: "/what-we-do" },
+  openGraph: {
+    type: "website",
+    url: "/what-we-do",
+    title: "Import, Distribution & Marketplace Growth Services | Agonis Partners",
+    description:
+      "End-to-end distribution in Türkiye: brand partnership, customs and import coordination, marketplace sales and campaign management.",
+  },
 };
 
 const serviceImages = [

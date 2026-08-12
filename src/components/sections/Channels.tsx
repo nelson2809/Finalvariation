@@ -67,7 +67,7 @@ export function Channels() {
                     </h3>
                     <p className="mt-0.5 text-sm text-body">{c.note}</p>
                   </div>
-                  <span className="inline-flex shrink-0 items-center gap-1.5 text-xs font-medium uppercase tracking-[0.14em] text-gold-600">
+                  <span className="hidden shrink-0 items-center gap-1.5 text-xs font-medium uppercase tracking-[0.14em] text-gold-600 sm:inline-flex">
                     <span className="underline-grow">Channel ready</span>
                     <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>

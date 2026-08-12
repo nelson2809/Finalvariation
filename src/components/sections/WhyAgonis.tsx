@@ -30,11 +30,16 @@ export function WhyAgonis() {
   const image = whyAgonisImages[active] ?? whyAgonisImages[0];
 
   return (
-    <Section id="why-agonis" bg="sand" className="overflow-hidden">
+    <Section id="why-agonis" bg="sand" className="overflow-x-clip">
       <div
         className="grid gap-12 lg:grid-cols-2 lg:gap-16"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
+        // Touch devices fire neither mouse event, so without these the
+        // carousel keeps advancing while someone is reading it on a phone.
+        onTouchStart={() => setPaused(true)}
+        onTouchEnd={() => setPaused(false)}
+        onTouchCancel={() => setPaused(false)}
       >
         {/* Left — step-synced image carousel */}
         <Reveal className="lg:sticky lg:top-28 lg:self-start">
@@ -67,14 +72,14 @@ export function WhyAgonis() {
               </span>
 
               {/* Dots — click to jump */}
-              <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-2">
+              <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-4">
                 {whyAgonis.map((f, i) => (
                   <button
                     key={f.title}
                     onClick={() => setActive(i)}
                     aria-label={`Show step ${i + 1}: ${f.title}`}
                     className={cn(
-                      "h-1.5 rounded-full transition-all duration-300",
+                      "relative h-1.5 rounded-full transition-all duration-300 before:absolute before:-inset-x-2 before:-inset-y-4 before:content-['']",
                       i === active
                         ? "w-7 bg-gold"
                         : "w-1.5 bg-white/50 hover:bg-white/80",

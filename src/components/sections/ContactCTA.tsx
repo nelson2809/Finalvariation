@@ -9,7 +9,7 @@ export function ContactCTA() {
     <section id="contact-cta" className="bg-white py-20 lg:py-28">
       <div className="container-px">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl border border-line bg-sand px-8 py-16 text-center sm:px-12 lg:px-16 lg:py-24">
+          <div className="relative overflow-hidden rounded-3xl border border-line bg-sand px-6 py-14 text-center sm:px-12 sm:py-16 lg:px-16 lg:py-24">
             <div className="pointer-events-none absolute -right-24 -top-20 h-80 w-80 animate-float-slow rounded-full bg-gold-300/25 blur-3xl" />
             <div className="pointer-events-none absolute -bottom-24 -left-20 h-80 w-80 animate-float-slower rounded-full bg-steel-200/30 blur-3xl" />
 

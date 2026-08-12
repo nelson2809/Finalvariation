@@ -45,7 +45,7 @@ export function FocusCategories() {
                   src={c.image}
                   alt={c.name}
                   fill
-                  sizes="(max-width: 640px) 50vw, 25vw"
+                  sizes="(max-width: 1023px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-ink/10" />
@@ -59,12 +59,12 @@ export function FocusCategories() {
                 </span>
               </div>
 
-              <div className="mt-4 flex items-start gap-3 px-0.5">
+              <div className="mt-4 flex flex-col gap-2 px-0.5 sm:flex-row sm:items-start sm:gap-3">
                 <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white text-navy shadow-soft">
                   <c.icon className="h-4.5 w-4.5" />
                 </span>
                 <div className="min-w-0">
-                  <h3 className="font-body text-lg font-medium leading-snug text-ink">
+                  <h3 className="font-body text-lg font-medium leading-snug text-ink break-words">
                     {c.name}
                   </h3>
                   <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-body">

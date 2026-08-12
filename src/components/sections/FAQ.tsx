@@ -55,7 +55,7 @@ export function FAQ() {
                         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                         className="overflow-hidden"
                       >
-                        <p className="px-6 pb-6 pr-12 text-[0.97rem] leading-relaxed text-body">
+                        <p className="px-6 pb-6 pr-6 text-[0.97rem] leading-relaxed text-body sm:pr-12">
                           {item.a}
                         </p>
                       </motion.div>

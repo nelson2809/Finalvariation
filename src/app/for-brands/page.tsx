@@ -21,9 +21,31 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 import { pageHeroImages } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "For Brands — Your Türkiye Import & Distribution Partner",
+  title: "Türkiye Import & Distribution Partner for Brands",
   description:
-    "If you're looking to enter the Turkish market, Agonis Partners can be your local import and distribution partner — handling import, marketplace sales, pricing and long-term growth.",
+    "An import and distribution partner for brands entering Turkey. Enter the Turkish market without a local operation — we handle brand representation, sales channel management, pricing and positioning, and stock and reorder planning.",
+  keywords: [
+    "import and distribution partner for brands entering Turkey",
+    "local distribution partner Türkiye",
+    "brand growth in Turkey",
+    "enter Turkish market without local operation",
+    "sales channel management Turkey",
+    "brand representation Türkiye",
+    "export director Turkey partner",
+    "local sales channel operator",
+    "stock and reorder planning",
+    "pricing and positioning Turkey",
+    "brand-safe distribution",
+    "consumer brand partner Istanbul",
+  ],
+  alternates: { canonical: "/for-brands" },
+  openGraph: {
+    type: "website",
+    url: "/for-brands",
+    title: "Türkiye Import & Distribution Partner for Brands | Agonis Partners",
+    description:
+      "Enter the Turkish market without building a local operation. We act as your import, distribution and sales channel partner in Türkiye.",
+  },
 };
 
 /* Ordered flow — step 1 → 7, flowing left to right */

@@ -20,12 +20,12 @@ export function NewsletterForm() {
           required
           aria-label="Email address"
           placeholder="Your work email"
-          className="w-full bg-transparent text-sm text-white placeholder:text-white/40 focus:outline-none"
+          className="w-full bg-transparent text-base text-white placeholder:text-white/40 focus:outline-none"
         />
         <button
           type="submit"
           aria-label="Subscribe"
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold text-ink transition-colors hover:bg-gold-600 hover:text-white"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold text-ink transition-colors hover:bg-gold-600 hover:text-white"
         >
           {done ? <Check className="h-4 w-4" /> : <ArrowRight className="h-4 w-4" />}
         </button>

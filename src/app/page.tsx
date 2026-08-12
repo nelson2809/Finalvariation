@@ -13,10 +13,14 @@ import { Compliance } from "@/components/sections/Compliance";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { ContactCTA } from "@/components/sections/ContactCTA";
+import { FaqJsonLd } from "@/components/seo/JsonLd";
 
 export default function HomePage() {
   return (
     <>
+      {/* Mirrors the visible FAQ accordion below — Google requires the
+          markup and the on-page content to match. */}
+      <FaqJsonLd />
       <Hero />
       {/* <PartnersMarquee /> — hidden until partner references are ready */}
       <WhatWeDo />

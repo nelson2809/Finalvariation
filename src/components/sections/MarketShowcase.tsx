@@ -60,7 +60,7 @@ export function MarketShowcase() {
                   src={s.image}
                   alt={s.imageAlt}
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 767px) 100vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-ink/10" />
@@ -89,7 +89,7 @@ export function MarketShowcase() {
       {/* Closing note */}
       <Reveal className="mt-14 text-center">
         <span className="inline-flex items-center gap-2 rounded-full border border-line bg-sand px-5 py-2.5 text-sm italic text-navy">
-          <PackageCheck className="h-4 w-4 text-gold-600" />
+          <PackageCheck className="h-4 w-4 shrink-0 text-gold-600" />
           End-to-end, transparent and commercially focused
         </span>
       </Reveal>

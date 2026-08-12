@@ -32,6 +32,17 @@ export function Header() {
     setActiveMenu(null);
   }, [pathname]);
 
+  // Stop the page scrolling behind the open drawer. Without this the drawer
+  // and the page fight each other for the same touch gesture.
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, [mobileOpen]);
+
   const isHome = pathname === "/";
   const solid = scrolled || mobileOpen || !isHome;
 
@@ -198,7 +209,7 @@ export function Header() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="container-px border-t border-line bg-white pb-6 pt-2">
+            <div className="container-px max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain border-t border-line bg-white pb-6 pt-2">
               <nav className="flex flex-col" aria-label="Mobile">
                 {navItems.map((item) => {
                   const active =

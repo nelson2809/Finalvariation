@@ -21,7 +21,7 @@ export function ParallaxBanner() {
       <div className="absolute inset-0 -z-0 bg-navy-900/80" />
       <div className="bg-grid pointer-events-none absolute inset-0 opacity-40" />
 
-      <div className="container-px relative z-10 py-24 lg:py-32">
+      <div className="container-px relative z-10 py-16 sm:py-20 lg:py-32">
         <Reveal className="mx-auto max-w-2xl text-center">
           <div className="flex items-center justify-center gap-3">
             <span className="gold-rule" />

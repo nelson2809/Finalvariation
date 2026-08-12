@@ -24,7 +24,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "scroll-mt-24 py-24 lg:py-36",
+        "scroll-mt-24 py-16 sm:py-24 lg:py-36",
         backgrounds[bg],
         className,
       )}

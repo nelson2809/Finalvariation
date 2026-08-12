@@ -15,9 +15,30 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 import { pageHeroImages } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Partnership Model — How We Work With Brands",
+  title: "Türkiye Distribution Partnership Model",
   description:
-    "A clear five-step partnership: brand & product evaluation, commercial discussion, import preparation, marketplace launch, and growth & reorder — with flexible cooperation models.",
+    "Our Türkiye distribution partnership model in five steps: brand and product evaluation, commercial discussion, import preparation in Turkey, marketplace launch strategy, and growth and reorder planning — with transparent reporting throughout.",
+  keywords: [
+    "Türkiye distribution partnership model",
+    "brand and product evaluation process",
+    "import preparation Turkey",
+    "marketplace launch strategy",
+    "exclusivity distribution agreement Turkey",
+    "commercial discussion distribution",
+    "pricing and MOQ agreement",
+    "channel strategy Türkiye",
+    "transparent reporting distribution",
+    "growth and reorder planning",
+    "five-step market entry process",
+  ],
+  alternates: { canonical: "/partnership-model" },
+  openGraph: {
+    type: "website",
+    url: "/partnership-model",
+    title: "Türkiye Distribution Partnership Model | Agonis Partners",
+    description:
+      "A five-step market entry process — evaluation, commercial terms, import preparation, marketplace launch, and growth planning.",
+  },
 };
 
 const cooperation = [

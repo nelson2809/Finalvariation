@@ -7,6 +7,11 @@ import { BackToTop } from "@/components/layout/BackToTop";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { ModalProvider } from "@/components/brand/ModalProvider";
+import {
+  OrganizationJsonLd,
+  ServiceJsonLd,
+  WebSiteJsonLd,
+} from "@/components/seo/JsonLd";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -27,29 +32,47 @@ const siteUrl = "https://www.agonispartners.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Agonis Partners — Bringing Global Consumer Brands to Türkiye",
+    default: "Import & Distribution Company Türkiye | Agonis Partners",
     template: "%s | Agonis Partners",
   },
   description:
-    "Agonis Partners is an Istanbul-based import & distribution company that brings high-potential international consumer brands to the Turkish market and grows them through leading e-commerce and marketplace channels — Amazon Türkiye, Trendyol, Hepsiburada and N11.",
+    "Agonis Partners is an Istanbul-based import and distribution company for international consumer brands entering Turkey. We handle import, customs and marketplace growth across Amazon Türkiye, Trendyol, Hepsiburada and N11.",
   keywords: [
-    "Türkiye distribution partner",
-    "import consumer brands Turkey",
-    "Trendyol distribution",
-    "Amazon Türkiye distributor",
-    "Hepsiburada marketplace partner",
+    "import and distribution company Turkey",
     "international brand distribution Türkiye",
+    "import consumer brands Turkey",
+    "Turkey market entry partner",
+    "e-commerce distribution Türkiye",
+    "bring brand to Turkey",
+    "Amazon Türkiye distributor",
+    "Trendyol distribution partner",
+    "Hepsiburada marketplace partner",
+    "consumer brand expansion Turkey",
+    "local distribution partner Istanbul",
+    "Europe Asia gateway market",
+    "Turkish marketplace growth",
   ],
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: siteUrl,
     siteName: "Agonis Partners",
-    title: "Bringing Global Consumer Brands to Türkiye",
+    title: "Import & Distribution Company in Türkiye for Global Brands",
     description:
-      "We import, distribute and grow international consumer products through Türkiye's leading e-commerce and sales channels.",
+      "We import, distribute and grow international consumer products through Türkiye's leading e-commerce and marketplace channels.",
   },
-  robots: { index: true, follow: true },
+  twitter: {
+    card: "summary_large_image",
+    title: "Import & Distribution Company Türkiye | Agonis Partners",
+    description:
+      "Bringing international consumer brands to the Turkish market — import, distribution and marketplace growth.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
 };
 
 export const viewport: Viewport = {
@@ -64,6 +87,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${lora.variable}`}>
       <body>
+        <OrganizationJsonLd />
+        <WebSiteJsonLd />
+        <ServiceJsonLd />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-navy focus:px-4 focus:py-2 focus:text-white"

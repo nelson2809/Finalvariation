@@ -31,6 +31,11 @@ export function PartnershipTimeline() {
       className="mt-14"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      // Touch devices fire neither mouse event, so without these the timeline
+      // keeps advancing while someone is reading it on a phone.
+      onTouchStart={() => setPaused(true)}
+      onTouchEnd={() => setPaused(false)}
+      onTouchCancel={() => setPaused(false)}
     >
       {/* Stepper */}
       <div className="relative">

@@ -13,7 +13,7 @@ type Props = {
 };
 
 const inputBase =
-  "w-full rounded-xl border border-line bg-white px-4 py-3 text-[0.95rem] text-ink " +
+  "w-full rounded-xl border border-line bg-white px-4 py-3 text-base sm:text-[0.95rem] text-ink " +
   "placeholder:text-muted/70 font-body transition-colors " +
   "focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30";
 

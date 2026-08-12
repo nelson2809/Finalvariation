@@ -9,9 +9,30 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 import { categories, pageHeroImages } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Categories — Consumer Focus Areas for Türkiye",
+  title: "Consumer Product Categories for the Turkish Market",
   description:
-    "Our focus consumer categories with strong e-commerce potential: pet products, home & living, consumer electronics, small appliances, personal care, baby & family, health & wellness and smart home.",
+    "Consumer product categories for the Turkish market with strong e-commerce potential: pet products distribution, home and living import, consumer electronics, small home appliances, baby and family products, health and wellness, and smart home.",
+  keywords: [
+    "consumer product categories for Turkish market",
+    "pet products distribution Turkey",
+    "home and living import Turkey",
+    "consumer electronics Turkey marketplace",
+    "baby and family products import",
+    "small home appliances Turkey",
+    "health and wellness accessories market",
+    "smart home products Turkey",
+    "e-commerce category potential",
+    "product-market fit Türkiye",
+    "category evaluation for import",
+  ],
+  alternates: { canonical: "/categories" },
+  openGraph: {
+    type: "website",
+    url: "/categories",
+    title: "Consumer Product Categories for the Turkish Market | Agonis Partners",
+    description:
+      "The consumer categories we evaluate for import into Türkiye, chosen for e-commerce potential and product-market fit.",
+  },
 };
 
 export default function CategoriesPage() {

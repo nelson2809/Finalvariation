@@ -16,7 +16,7 @@ export function Testimonials() {
       <RevealStagger className="mt-14 grid gap-6 lg:grid-cols-3">
         {testimonials.map((t) => (
           <RevealItem key={t.role}>
-            <figure className="card-luxe group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white p-8">
+            <figure className="card-luxe group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white p-6 sm:p-8">
               <span
                 aria-hidden
                 className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-gold to-gold-300 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -31,7 +31,7 @@ export function Testimonials() {
                 “{t.quote}”
               </blockquote>
               <figcaption className="mt-6 flex items-center gap-3 border-t border-line pt-5">
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-navy to-steel font-heading text-sm font-semibold text-white">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-navy to-steel font-heading text-sm font-semibold text-white">
                   {t.initials}
                 </span>
                 <span>

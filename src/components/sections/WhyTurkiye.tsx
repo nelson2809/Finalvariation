@@ -30,7 +30,7 @@ export function WhyTurkiye() {
           </p>
         </Reveal>
 
-        <RevealStagger className="grid grid-cols-2 gap-x-10 gap-y-12">
+        <RevealStagger className="grid grid-cols-2 gap-x-5 gap-y-10 sm:gap-x-10 sm:gap-y-12">
           {whyTurkiye.map((s) => (
             <RevealItem key={s.label}>
               <div className="border-t border-ink/15 pt-5">
