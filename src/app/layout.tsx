@@ -8,11 +8,7 @@ import { BackToTop } from "@/components/layout/BackToTop";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { ModalProvider } from "@/components/brand/ModalProvider";
-import {
-  OrganizationJsonLd,
-  ServiceJsonLd,
-  WebSiteJsonLd,
-} from "@/components/seo/JsonLd";
+import { OrganizationJsonLd } from "@/components/seo/JsonLd";
 
 const GA_MEASUREMENT_ID = "G-M5PTSGSML3";
 
@@ -106,8 +102,6 @@ export default function RootLayout({
           `}
         </Script>
         <OrganizationJsonLd />
-        <WebSiteJsonLd />
-        <ServiceJsonLd />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-navy focus:px-4 focus:py-2 focus:text-white"

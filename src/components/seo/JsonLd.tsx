@@ -30,44 +30,164 @@ export function OrganizationJsonLd() {
     <JsonLdScript
       data={{
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": `${siteUrl}/#organization`,
-        name: "Agonis Partners",
-        alternateName: "Agonis Partners Import & Distribution",
-        url: siteUrl,
-        logo: `${siteUrl}/agonis-logo.png`,
-        description:
-          "Istanbul-based import and distribution company bringing international consumer brands to Turkey and growing them across Amazon Türkiye, Trendyol, Hepsiburada and N11.",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "Göztepe Mah. Tepegöz Sk. Ikar Is Merkezi No: 1, Iç Kapı No: 8",
-          addressLocality: "Kadıköy",
-          addressRegion: "Istanbul",
-          addressCountry: "TR",
-        },
-        contactPoint: [
+        "@graph": [
           {
-            "@type": "ContactPoint",
-            telephone: contact.phone,
+            "@type": "Organization",
+            "@id": `${siteUrl}/#organization`,
+            name: "Agonis Partners",
+            alternateName: "Agonis Partners Import & Distribution",
+            url: siteUrl,
+            logo: {
+              "@type": "ImageObject",
+              "@id": `${siteUrl}/#logo`,
+              url: `${siteUrl}/agonis-logo.png`,
+              contentUrl: `${siteUrl}/agonis-logo.png`,
+              caption: "Agonis Partners logo",
+              inLanguage: "en",
+              width: "682",
+              height: "227",
+            },
+            image: {
+              "@id": `${siteUrl}/#logo`,
+            },
+            description:
+              "Agonis Partners is an Istanbul-based import and distribution company that helps international consumer brands enter, grow and scale in the Turkish market through local distribution and e-commerce marketplaces including Amazon Türkiye, Trendyol, Hepsiburada and N11.",
+            telephone: "+905059095007",
             email: contact.email,
-            contactType: "business partnerships",
-            areaServed: ["TR", "GB", "US", "EU"],
-            availableLanguage: ["en", "tr"],
+            address: {
+              "@type": "PostalAddress",
+              streetAddress:
+                "Göztepe Mah. Tepegöz Sk. Ikar Is Merkezi No: 1, Iç Kapı No: 8",
+              addressLocality: "Kadıköy",
+              addressRegion: "Istanbul",
+              addressCountry: "TR",
+            },
+            contactPoint: [
+              {
+                "@type": "ContactPoint",
+                telephone: "+905059095007",
+                email: contact.email,
+                contactType: "customer service",
+                areaServed: [
+                  { "@type": "Country", name: "Turkey" },
+                  { "@type": "Country", name: "United Kingdom" },
+                  { "@type": "Country", name: "United States" },
+                ],
+                availableLanguage: ["English", "Turkish"],
+              },
+            ],
+            areaServed: {
+              "@type": "Country",
+              name: "Turkey",
+            },
+            knowsAbout: [
+              "Import and distribution in Turkey",
+              "International consumer brand distribution in Türkiye",
+              "Marketplace e-commerce sales in Türkiye",
+              "Amazon Türkiye distribution",
+              "Trendyol marketplace distribution",
+              "Hepsiburada marketplace distribution",
+              "N11 marketplace distribution",
+              "Customs and import coordination in Turkey",
+              "Consumer brand market entry into Turkey",
+              "Brand partnerships",
+              "Product localization",
+              "Sales channel management",
+              "Pricing and promotions",
+              "Stock and reorder planning",
+            ],
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Import and distribution services in Turkey",
+              itemListElement: [
+                {
+                  "@type": "OfferCatalog",
+                  name: "Brand Partnership & Representation",
+                  itemListElement: [
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Brand partnership and representation in Türkiye",
+                        description:
+                          "We partner with selected international consumer brands that have strong product potential and a clear fit for the Turkish market.",
+                      },
+                    },
+                  ],
+                },
+                {
+                  "@type": "OfferCatalog",
+                  name: "Import & Customs Coordination",
+                  itemListElement: [
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Import and customs coordination in Turkey",
+                        description:
+                          "Commercial coordination, import preparation, customs-related coordination, local requirements and labeling.",
+                      },
+                    },
+                  ],
+                },
+                {
+                  "@type": "OfferCatalog",
+                  name: "Marketplace & E-Commerce Sales",
+                  itemListElement: [
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Marketplace e-commerce sales in Türkiye",
+                        description:
+                          "Product listings, content localization, pricing, campaigns and promotions across Amazon Türkiye, Trendyol, Hepsiburada and N11.",
+                      },
+                    },
+                  ],
+                },
+                {
+                  "@type": "OfferCatalog",
+                  name: "Sales Channel Management",
+                  itemListElement: [
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Sales channel management and pricing",
+                        description:
+                          "Pricing and product positioning, campaign planning and marketplace visibility.",
+                      },
+                    },
+                  ],
+                },
+                {
+                  "@type": "OfferCatalog",
+                  name: "Stock & Reorder Planning",
+                  itemListElement: [
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Stock monitoring and reorder planning",
+                        description:
+                          "Stock monitoring, performance tracking, reorder planning and range expansion.",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
           },
-        ],
-        areaServed: {
-          "@type": "Country",
-          name: "Turkey",
-        },
-        knowsAbout: [
-          "import and distribution Turkey",
-          "international brand distribution Türkiye",
-          "marketplace e-commerce sales Türkiye",
-          "Amazon Türkiye distribution",
-          "Trendyol distribution partner",
-          "Hepsiburada marketplace partner",
-          "customs and import coordination Turkey",
-          "consumer brand expansion Turkey",
+          {
+            "@type": "WebSite",
+            "@id": `${siteUrl}/#website`,
+            url: siteUrl,
+            name: "Agonis Partners",
+            description:
+              "Import and distribution company in Turkey for international consumer brands.",
+            publisher: { "@id": `${siteUrl}/#organization` },
+            inLanguage: "en",
+          },
         ],
       }}
     />
@@ -76,21 +196,7 @@ export function OrganizationJsonLd() {
 
 /** WebSite entity — enables the sitelinks search box treatment. */
 export function WebSiteJsonLd() {
-  return (
-    <JsonLdScript
-      data={{
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "@id": `${siteUrl}/#website`,
-        url: siteUrl,
-        name: "Agonis Partners",
-        description:
-          "Import and distribution company in Turkey for international consumer brands.",
-        publisher: { "@id": `${siteUrl}/#organization` },
-        inLanguage: "en",
-      }}
-    />
-  );
+  return null;
 }
 
 /**
@@ -98,39 +204,7 @@ export function WebSiteJsonLd() {
  * queries like "import and distribution company Turkey".
  */
 export function ServiceJsonLd() {
-  return (
-    <JsonLdScript
-      data={{
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        name: "Agonis Partners — Import & Distribution",
-        url: siteUrl,
-        image: `${siteUrl}/agonis-logo.png`,
-        priceRange: "$$",
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Kadıköy",
-          addressRegion: "Istanbul",
-          addressCountry: "TR",
-        },
-        areaServed: { "@type": "Country", name: "Turkey" },
-        hasOfferCatalog: {
-          "@type": "OfferCatalog",
-          name: "Import and distribution services in Turkey",
-          itemListElement: [
-            "Brand partnership and representation in Türkiye",
-            "Import and customs coordination Turkey",
-            "Marketplace e-commerce sales Türkiye",
-            "Sales channel management and pricing",
-            "Stock monitoring and reorder planning",
-          ].map((name) => ({
-            "@type": "Offer",
-            itemOffered: { "@type": "Service", name },
-          })),
-        },
-      }}
-    />
-  );
+  return null;
 }
 
 /**
