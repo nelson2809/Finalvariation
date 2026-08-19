@@ -438,7 +438,7 @@ export const contact = {
   company: "Agonis Partners",
   tagline: "Import & Distribution",
   address:
-    "GÖZTEPE MAH. TEPEGÖZ SK. IKAR IS MERKEZI NO: 1 IÇ KAPI NO: 8 KADIKÖY/ ISTANBUL",
+    "Göztepe Mah. Tepegöz Sk. İkar İş Merkezi No: 1 İç Kapı No: 8, Kadıköy / İstanbul, Türkiye",
   phone: "+90 505 9095007",
   phoneHref: "tel:+905059095007",
   email: "info@agonispartners.com",

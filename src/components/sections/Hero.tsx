@@ -58,7 +58,7 @@ export function Hero() {
             {...fade(0.1)}
             className="display-edit mt-9 text-white"
           >
-            Global consumer brands, brought gracefully to{" "}
+            Bringing high-potential consumer brands to{" "}
             <em className="italic text-gold-300">Türkiye</em>.
           </motion.h1>
 
@@ -66,9 +66,8 @@ export function Hero() {
             {...fade(0.2)}
             className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white lg:text-xl"
           >
-            We import, distribute and grow international consumer products
-            through Türkiye&apos;s leading e-commerce channels — so your brand
-            enters the market without building a local operation.
+            We buy, import, distribute and grow international consumer products
+            through Türkiye&apos;s leading e-commerce and sales channels.
           </motion.p>
 
           <motion.div

@@ -53,7 +53,7 @@ const handled = [
   { icon: ShoppingBag, title: "Purchase & import products", text: "We buy and import your products into Türkiye under clear commercial terms." },
   { icon: FileCheck2, title: "Import & local requirements", text: "Product classification, customs coordination, labeling and local compliance." },
   { icon: TrendingUp, title: "Long-term brand growth", text: "Visibility, campaigns and range expansion to grow your brand over time." },
-  { icon: Store, title: "Manage local sales channels", text: "We operate and own your presence across Türkiye's sales channels." },
+  { icon: Store, title: "Manage local sales channels", text: "We manage your local sales presence across Türkiye’s relevant channels." },
   { icon: Tag, title: "Pricing & positioning", text: "Competitive, brand-safe pricing and positioning tuned to the local market." },
   { icon: ShoppingCart, title: "Marketplace & e-commerce sales", text: "Listings, content, pricing and campaigns on Amazon Türkiye, Trendyol, Hepsiburada and N11." },
   { icon: Boxes, title: "Stock & reorder planning", text: "Demand-based stock planning and reorders so you never miss sales." },
@@ -120,7 +120,7 @@ export default function ForBrandsPage() {
         <SectionHeading
           eyebrow="What We Handle"
           title="We take care of everything between your warehouse and the Turkish customer"
-          description="You supply products. We buy your products, handle the import, manage sales, the channels and the growth."
+          description="You supply the products. We buy, import, launch and grow them in Türkiye."
         />
 
         {/* Desktop: snake flow — 4 across, curve down, 3 across */}

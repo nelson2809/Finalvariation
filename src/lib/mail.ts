@@ -119,7 +119,7 @@ function shell(headline: string, intro: string, inner: string): string {
 
     <tr><td style="background:${SAND};padding:20px 32px;border-top:1px solid ${LINE};">
       <p style="margin:0;font:400 12px/1.6 Helvetica,Arial,sans-serif;color:#64748b;">
-        Agonis Partners · Göztepe Mah. Tepegöz Sk. Ikar Is Merkezi No: 1, Kadıköy / Istanbul<br>
+        Agonis Partners · Göztepe Mah. Tepegöz Sk. İkar İş Merkezi No: 1 İç Kapı No: 8, Kadıköy / İstanbul, Türkiye<br>
         <a href="${SITE_URL}" style="color:${NAVY};text-decoration:none;">${esc(
           SITE_URL.replace(/^https?:\/\//, ""),
         )}</a>
